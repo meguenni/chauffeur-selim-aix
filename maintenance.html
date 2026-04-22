@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maintenance - Chauffeur Privé Aix-Marseille</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --fond: #f4f3f0;
+            --bleu-fonce: #1d304d;
+            --bleu-clair: #506589;
+            --or: #c9a84c;
+            --gris: #5d6d84;
+            --blanc: #ffffff;
+        }
+
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'DM Sans', Arial, sans-serif;
+            background: radial-gradient(circle at top left, rgba(201,168,76,0.18), transparent 30%),
+                        linear-gradient(180deg, #eef1f4 0%, #f7f5f1 100%);
+            color: var(--bleu-fonce);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .maintenance-card {
+            max-width: 760px;
+            width: 100%;
+            background: rgba(255,255,255,0.96);
+            border: 1px solid rgba(29,48,77,0.12);
+            border-radius: 24px;
+            box-shadow: 0 30px 80px rgba(18,35,61,0.12);
+            padding: 3rem 3rem 2.5rem;
+            text-align: center;
+        }
+
+        .maintenance-card::before {
+            content: ' '; 
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+
+        .maintenance-title {
+            margin: 0 0 1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.8rem, 4vw, 4.5rem);
+            letter-spacing: -0.04em;
+            line-height: 1.02;
+        }
+
+        .maintenance-subtitle {
+            margin: 0;
+            color: var(--gris);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            max-width: 620px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .maintenance-info {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            text-align: left;
+        }
+
+        .maintenance-info p {
+            margin: 0;
+            color: var(--gris);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .maintenance-highlight {
+            color: var(--bleu-fonce);
+            font-weight: 600;
+        }
+
+        .maintenance-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 2rem auto 0;
+            padding: 0.95rem 1.9rem;
+            border-radius: 999px;
+            border: 1px solid transparent;
+            background: linear-gradient(135deg, var(--bleu-fonce), var(--bleu-clair));
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .maintenance-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 18px 40px rgba(29,48,77,0.18);
+        }
+
+        footer {
+            margin-top: 2rem;
+            color: var(--gris);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 620px) {
+            body { padding: 1.2rem; }
+            .maintenance-card { padding: 2rem 1.5rem; }
+            .maintenance-info { margin-top: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <article class="maintenance-card">
+        <h1 class="maintenance-title">Maintenance en cours</h1>
+        <p class="maintenance-subtitle">Nous apportons actuellement une touche finale à notre site pour vous offrir une expérience plus fluide et plus élégante. Merci de votre patience.</p>
+
+        <div class="maintenance-info">
+            <p><span class="maintenance-highlight">Service réservé :</span> Chauffeur privé Aix-Marseille et toute la région PACA.</p>
+            <p><span class="maintenance-highlight">Durée estimée :</span> de quelques minutes à une heure.</p>
+            <p>Nous revenons en ligne très bientôt. En cas d'urgence, appelez directement :</p>
+            <p class="maintenance-highlight">+33 7 63 13 33 97</p>
+        </div>
+
+        <a class="maintenance-button" href="tel:+33763133397">Appel d'urgence</a>
+
+        <footer>Merci de votre confiance — Chauffeur Privé Aix-Marseille</footer>
+    </article>
+</body>
+</html>
